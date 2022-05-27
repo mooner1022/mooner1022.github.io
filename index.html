@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <!-- <link rel="manifest" href="icon/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/index.js"></script>
+    <title>mooner1022</title>
+</head>
+<body>
+<div id="background-filler"></div>
+<main class="container">
+    <section id="scroll-heading">
+        <div id="heading">
+            <h3>Hello, World! 🐳</h3>
+            <div id="body">
+                <div id="profile-image-container">
+                    <svg id="circular-wrapper">
+                        <circle id="circular" cx="50%" cy="50%" r="45%" />
+                    </svg>
+                    <img id="profile-image" src="img/profile.png" alt="Profile image">
+                </div>
+                <h3 id="name">Minki Moon <small>(mooner1022)</small></h3>
+                <h6><u>20y/o</u> Student programmer, learning
+                    <svg id="icon-kotlin" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Kotlin</title><path d="M24 24H0V0h24L12 12Z"/></svg>
+                    Kotlin</h6>
+
+                <a id="scroll-down" href="#scroll-introduction"><span></span></a>
+            </div>
+        </div>
+    </section>
+    <section id="scroll-introduction">
+        <h1>Hi There! 👋</h1>
+        <div class="grid">
+            <article data-aos="fade">
+                <header><h1>About me 📃</h1></header>
+                I'm just an ordinary undergraduate who likes programming.<br>
+                I taught myself without learning anywhere else.<br>
+                I'm currently studying <mark>computer engineering</mark> at Hoseo University.<br>
+                I'm not good enough yet, but I'm improving through various experiences!
+            </article>
+            <article id="skills" data-aos="fade">
+                <header><h1>Skills 🛠️</h1></header>
+                <u>Languages</u><br>
+                <div>
+                    <img src="https://img.shields.io/badge/-c-A8B9CC?style=for-the-badge&logo=c&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-Kotlin-0095d5?style=for-the-badge&logo=kotlin&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-Java-007396?style=for-the-badge&logo=java&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-javascript-c2ad07?style=for-the-badge&logo=javascript&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-typescript-007acc?style=for-the-badge&logo=typescript&logoColor=fff">
+                </div><br>
+                <u>Tools</u><br>
+                <div>
+                    <img src="https://img.shields.io/badge/-IntelliJ&nbsp;IDEA-000000?style=for-the-badge&logo=IntelliJ-IDEA&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-Android&nbsp;Studio-3DDC84?style=for-the-badge&logo=Android-Studio&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-Visual&nbsp;Studio&nbsp;Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=fff">
+                    <img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=Git&logoColor=fff">
+                </div>
+            </article>
+        </div>
+    </section>
+    <h1>Recent projects</h1>
+    <section id="git-repo">
+    </section>
+</main>
+<nav data-aos="fade" data-aos-anchor="#scroll-introduction">
+    <ul>
+        <li><img src="img/profile.png" alt="Profile image"></li>
+        <li><strong>MOONER</strong></li>
+    </ul>
+</nav>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+    const width = document.querySelector("#profile-image").clientWidth.toString() + "px";
+    const wrapper = document.querySelector("#circular-wrapper");
+    //console.log(width);
+    wrapper.style.width = width;
+    wrapper.style.height = width;
+</script>
+</body>
+</html>

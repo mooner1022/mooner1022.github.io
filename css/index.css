@@ -1,0 +1,322 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    animation: fadein 1s;
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+nav {
+    padding-left: 10%;
+    background-color: rgb(28, 28, 28);
+    display: block;
+    position: fixed;
+    vertical-align: center;
+    width: 100%;
+    top: 0;
+}
+
+nav > ul > li > img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+main {
+    opacity: 0;
+    animation: fadein 1s forwards;
+    animation-delay: 0.5s;
+    text-align: center;
+    height: 100vh;
+}
+
+main > section {
+    padding-top: 10vh;
+    scroll-snap-align: center;
+}
+
+section > header > h1 {
+    margin-bottom: 0;
+}
+
+article > header > h1 {
+    margin-bottom: 0;
+}
+
+article {
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+article > header {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+article > footer {
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#git-repo {
+    padding-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.git-card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 40vw;
+    max-width: 560px;
+}
+
+.git-card > article {
+    width: 100%;
+    margin: 20px 20px;
+    position: relative;
+}
+
+.git-card > article:hover {
+    cursor: pointer;
+}
+
+.git-card > article > h3 {
+    margin-bottom: 10px;
+}
+
+.git-card > article > footer {
+    align-self: flex-end;
+    margin: 0 auto;
+}
+
+.bottom {
+    align-content: center;
+    text-align: center;
+}
+
+.footer-content {
+    width: fit-content;
+    display:inline-block;
+    margin-right: 20px;
+}
+
+#scroll-heading {
+    height: 100vh;
+}
+
+#heading {
+    vertical-align: middle;
+}
+
+#heading > #body {
+    opacity: 0;
+    animation: fadein 1s forwards;
+    animation-delay: 1s;
+}
+
+#background-filler {
+    opacity: 0;
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(40, 40, 40);
+}
+
+#profile-image-container {
+    position: relative;
+}
+
+#profile-image {
+    width: 15%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadein 0.5s ease-in forwards;
+    animation-delay: 3.5s;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#circular-wrapper {
+    z-index: 0;
+}
+
+#circular {
+    fill: none;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    stroke-dasharray: 360;
+    stroke-dashoffset:360;
+    stroke: #ffffff;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    animation: progress-1 2s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes progress-1 {
+    0% {
+        stroke-dashoffset: 360;
+    }
+    80% {
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-opacity: 0;
+    }
+}
+
+#scroll-introduction {
+    height: auto;
+}
+
+#scroll-introduction > div > article {
+    display: inline-block;
+    text-align: start;
+}
+
+#skills {
+    align-content: start;
+}
+
+#skills > div {
+    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#skills > div > img {
+    margin: 10px;
+}
+
+#scroll-down {
+    padding-top: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: inline-block;
+    transform: translate(0, -50%);
+    color: #fff;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+#scroll-down:hover {
+    opacity: .5;
+}
+
+#scroll-down > span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+#scroll-down > span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: scroll-down-button 2s infinite;
+    box-sizing: border-box;
+}
+
+@keyframes scroll-down-button {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-height: 700px) {
+
+    #scroll-heading {
+        padding-top: 0;
+    }
+
+    #heading > #name {
+        margin-bottom: 20px;
+    }
+
+    #scroll-down {
+        bottom: -30px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .git-card {
+        flex: 1 0 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    main {
+        margin-top: 30px;
+    }
+
+    #profile-image {
+        width: 30%;
+        border-radius: 50%;
+    }
+}
+
+#icon-kotlin {
+    margin-top: -5px;
+    width: 20px;
+    fill: #7F52FF;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
