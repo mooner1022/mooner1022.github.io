@@ -23,7 +23,7 @@ fetch(githubUrl)
         const size = json.length > 4 ? 4 : json.length;
         for (let i = 0; i < size; i++) {
             const data = sorted[i];
-            const html = "<div class=\"git-card\">\n" +
+            const html = "<div class=\"git-card\" data-aos=\"fade\">\n" +
             "            <article style=\"text-align: start;\" onclick=\"window.open('" + data.html_url + "', '_blank')\">\n" +
             "                <h3>" + data.name + "</h3>\n" +
             "                <small>" + data.description + "</small>\n" +
