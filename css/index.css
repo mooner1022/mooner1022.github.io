@@ -69,6 +69,10 @@ article > footer {
     padding-bottom: 20px;
 }
 
+.title {
+    color: #d5dce2;
+}
+
 #git-repo {
     padding-top: 0;
     display: flex;
