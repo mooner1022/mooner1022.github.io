@@ -15,11 +15,18 @@ window.addEventListener("scroll", () => {
 });
 */
 
-const githubUrl = "https://api.github.com/users/mooner1022/repos";
+const githubUrl = "https://api.github.com/users/mooner1022/repos?per_page=100";
 fetch(githubUrl)
     .then((response) => {return response.json()})
     .then((json) => {
-        const sorted = json.sort((a, b) => { return  b.stargazers_count - a.stargazers_count });
+        const sorted = json.sort((a, b) => {
+            let sa = a.stargazers_count;
+            let sb = b.stargazers_count;
+
+            if(sa > sb) return -1;
+            if(sa === sb) return 0;
+            if(sa < sb) return 1;
+        });
         const size = json.length > 4 ? 4 : json.length;
         for (let i = 0; i < size; i++) {
             const data = sorted[i];
