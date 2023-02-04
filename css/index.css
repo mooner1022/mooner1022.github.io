@@ -1,3 +1,5 @@
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
 html, body {
     margin: 0;
     height: 100%;
@@ -7,16 +9,16 @@ html {
     animation: fadein 1s;
     scroll-behavior: smooth;
     scroll-snap-align: center;
-    background-image: url("../img/background.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    /*background-image: url("../img/background.png");*/
+    /*background-color: #1f2d38;*/
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%) no-repeat fixed center center;
     background-size: cover;
 }
 
 nav {
     padding-left: 10%;
-    background-color: rgb(28, 28, 28);
+    background-color: rgba(28, 28, 28, 0.5);
+    backdrop-filter: blur(8px);
     display: block;
     position: fixed;
     vertical-align: center;
@@ -71,14 +73,29 @@ article > footer {
 
 .title {
     color: #d5dce2;
+    font-family: "NanumSquareRound", sans-serif;
 }
 
-#git-repo {
+#name {
+    font-family: "NanumSquareRound", sans-serif;
+    font-weight: 800;
+}
+
+#name > small {
+    font-weight: 300;
+}
+
+#major-projects, #git-repo {
     padding-top: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
+}
+
+.title-desc {
+    font-size: x-large !important;
+    margin-right: 10px;
 }
 
 .git-card {
@@ -170,7 +187,7 @@ article > footer {
     stroke-width: 10px;
     stroke-linecap: round;
     stroke-dasharray: 360;
-    stroke-dashoffset:360;
+    stroke-dashoffset: 360;
     stroke: #ffffff;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
@@ -192,6 +209,41 @@ article > footer {
     }
 }
 
+#profile-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 400px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: rgba(47, 47, 47, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+#profile-buttons > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #69808e;
+}
+
+#profile-buttons > #github:hover {
+    color: #ffffff;
+}
+
+#profile-buttons > #discord:hover {
+    color: #7289da;
+}
+
+#profile-buttons > #email:hover {
+    color: #ff6767;
+}
+
 #scroll-introduction {
     height: auto;
 }
@@ -199,6 +251,10 @@ article > footer {
 #scroll-introduction > div > article {
     display: inline-block;
     text-align: start;
+}
+
+#about-me {
+    line-height: 2em;
 }
 
 #skills {
@@ -308,12 +364,28 @@ article > footer {
         width: 30%;
         border-radius: 50%;
     }
+
+    #profile-buttons {
+        width: 300px;
+    }
 }
 
 #icon-kotlin {
     margin-top: -5px;
     width: 20px;
     fill: #7F52FF;
+}
+
+#footer {
+    padding: 0 50px 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#footer > small {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #18232c;
 }
 
 @keyframes fadein {

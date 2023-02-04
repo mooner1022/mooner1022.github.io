@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,15 +20,35 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/pico.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tooltip.css">
+    <link rel="stylesheet" href="css/firefly.css">
+    <link rel="stylesheet" href="css/fancy-button.css">
     <link rel="stylesheet" href="css/all.min.css">
     <script src="js/index.js"></script>
     <title>mooner1022</title>
 </head>
 <body>
-<div id="background-filler"></div>
+<!-- Fireflies :D -->
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+
 <main class="container">
     <section id="scroll-heading">
         <div id="heading">
@@ -40,19 +60,31 @@
                     </svg>
                     <img id="profile-image" src="img/profile.png" alt="Profile image">
                 </div>
-                <h3 class="title" id="name">Minki Moon <small>(mooner1022)</small></h3>
+                <h3 style="padding-top: 20px" class="title" id="name"><b>Minki Moon</b><br><small>(aka. mooner | siwol)</small></h3>
                 <h6 class="title"><s>20</s> -> <u>21y/o</u> Student programmer, learning
                     <svg id="icon-kotlin" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Kotlin</title><path d="M24 24H0V0h24L12 12Z"/></svg>
                     Kotlin</h6>
+                <div id="profile-buttons">
+                    <a href="https://mooner.dev" id="github" class="secondary tool">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                    <a href="#" id="discord" class="secondary" tooltip="무너#0001" flow="down">
+                        <i class="fa-brands fa-discord fa-2xl"></i>
+                    </a>
+                    <a href="#" id="email" class="secondary" tooltip="siwol@mooner.dev" flow="down">
+                        <i class="fa-solid fa-envelope fa-2xl"></i>
+                    </a>
+                </div>
 
                 <a id="scroll-down" href="#scroll-introduction"><span></span></a>
             </div>
         </div>
     </section>
     <section id="scroll-introduction">
-        <h1 class="title" data-aos="fade">Hi There! 👋</h1>
+        <h1 class="title" data-aos="fade" style="margin-bottom: 0">Hi There! 👋</h1>
+        <h6 class="title" data-aos="fade" style="font-weight: 300">Thanks for visiting</h6>
         <div class="grid">
-            <article data-aos="fade">
+            <article id="about-me" data-aos="fade">
                 <header><h1>About me 📃</h1></header>
                 I'm just an ordinary undergraduate who likes programming.<br>
                 I taught myself without learning anywhere else, and<br>
@@ -85,20 +117,84 @@
             </article>
         </div>
     </section>
+    <h1 class="title" data-aos="fade">📁Major Projects</h1>
+    <h3 class="title" data-aos="fade" style="margin-bottom: 0">Android</h3>
+    <section id="major-projects">
+        <div class="git-card" data-aos="fade" onclick="window.open('https://play.google.com/store/apps/details?id=com.temp.hanriv.moonm', '_blank')">
+            <article style="text-align: start;">
+            <h3><i class="title-desc fa-brands fa-google-play"></i>지금 한강은｡</h3>
+            <small>An application showing real-time water temperature of Han-river</small>
+            <br><br>
+            <footer>
+                <div class='bottom'>
+                    <div class='footer-content'>
+                        <span class='img fa-solid fa-code'></span>
+                        Kotlin
+                    </div>
+                    <div class='footer-content'>
+                        <span class='img fa-solid fa-star'></span>
+                        4.940
+                    </div>
+                    <div class='footer-content'>
+                        <span class='img fa-solid fa-download'></span>
+                        20,000+
+                    </div>
+                </div>
+            </footer>
+            </article>
+        </div>
+        <div class="git-card" data-aos="fade" onclick="window.open('https://github.com/mooner1022/StarLight', '_blank')">
+            <article style="text-align: start;">
+                <h3>
+                    <i class="title-desc fa-brands fa-github"></i>Project StarLight 🌟
+                </h3>
+                <small>Scriptable messenger auto-reply application with plugin support</small>
+                <br><br>
+                <footer>
+                    <div class='bottom'>
+                        <div class='footer-content'>
+                            <span class='img fa-solid fa-code'></span>
+                            Kotlin
+                        </div>
+                        <div class='footer-content'>
+                            <span class='img fa-solid fa-star'></span>
+                            N/A
+                        </div>
+                        <div class='footer-content'>
+                            <span class='img fa-solid fa-download'></span>
+                            N/A
+                        </div>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </section>
     <h1 class="title" data-aos="fade">📜Recent projects</h1>
     <section id="git-repo">
+        <a class="fancy" href="https://github.com/mooner1022?tab=repositories">
+            <span class="top-key"></span>
+            <span class="text">SHOW MORE</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+        </a>
     </section>
+    <footer id="footer" class="container">
+        <small>Built by <a href="https://github.com/mooner1022">Mooner</a> with ❤ and ☕•</small>
+    </footer>
 </main>
 <nav data-aos="fade" data-aos-anchor="#scroll-introduction">
     <ul>
         <li><img src="img/profile.png" alt="Profile image"></li>
         <li class="title"><strong>MOONER</strong></li>
+        <li><a href="https://mooner.dev" class="secondary"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="#" class="secondary" tooltip="무너#0001" flow="down"><i class="fa-brands fa-discord"></i></a></li>
+        <li><a href="#" class="secondary" tooltip="siwol@mooner.dev" flow="down"><i class="fa-solid fa-envelope"></i></a></li>
     </ul>
 </nav>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
-    const width = document.querySelector("#profile-image").clientWidth.toString() + "px";
+    const width = document.querySelector("#profile-image").clientWidth + "px";
     const wrapper = document.querySelector("#circular-wrapper");
     //console.log(width);
     wrapper.style.width = width;
