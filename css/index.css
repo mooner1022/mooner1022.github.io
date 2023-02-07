@@ -85,7 +85,7 @@ article > footer {
     font-weight: 300;
 }
 
-#major-projects, #git-repo {
+.major-projects, #git-repo {
     padding-top: 0;
     display: flex;
     flex-flow: row wrap;
